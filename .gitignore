@@ -1,0 +1,5 @@
+target
+.eveagents*
+.project
+.classpath
+.settings

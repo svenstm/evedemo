@@ -1,0 +1,24 @@
+# Eve configuration
+
+# environment specific settings
+
+# transport services
+transport_services:
+- class: HttpService
+  servlet_url: http://localhost:8080/agents/
+
+# state settings
+# the state is used to persist the agents state.
+state:
+  class: FileStateFactory
+  path: .eveagents
+  json: true
+
+# scheduler settings
+scheduler:
+  class: RunnableSchedulerFactory
+
+bootstrap:
+  agents: 
+    helloworld: com.askcs.evedemo.agents.HelloWorldAgent
+    ma: com.askcs.evedemo.agents.ManagementAgent
